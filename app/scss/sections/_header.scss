@@ -1,0 +1,40 @@
+@use "../util" as *;
+.header {
+  background-color: #002e34;
+  &__container {
+    color: #fff;
+    padding: rem(6) 1%;
+    img {
+      max-width: rem(100);
+    }
+    .header__navigations {
+      & > * {
+        cursor: pointer;
+        transition: 200ms;
+      }
+      & > *:hover:not(& > button) {
+        opacity: 0.7;
+      }
+    }
+    .header__languages {
+      h4 {
+        font-size: rem(16);
+      }
+      span.line,
+      span.ru {
+        opacity: 0.6;
+      }
+    }
+    button {
+      padding: rem(8) rem(16);
+      font-size: rem(15);
+      border: rem(6) solid #fff;
+      background-color: #fff;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: transparent;
+      }
+    }
+  }
+}

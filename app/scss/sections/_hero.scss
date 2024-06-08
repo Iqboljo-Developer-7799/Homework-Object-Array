@@ -1,0 +1,47 @@
+@use "../util" as *;
+
+.cards {
+  background-color: rgb(242, 244, 246);
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    @media (max-width: rem(850)) {
+      grid-template-columns: repeat(3, 3fr);
+    }
+    @media (max-width: rem(580)) {
+      grid-template-columns: repeat(2, 2fr);
+    }
+    @media (max-width: rem(378)) {
+      grid-template-columns: 1fr;
+    }
+    gap: rem(10);
+    padding: rem(80) 1%;
+  }
+  .card {
+    border: none;
+    border-radius: rem(8);
+    overflow: hidden;
+  }
+  .card-info {
+    padding: rem(16) rem(10);
+    font-size: rem(15);
+    @media (max-width: rem(650)) {
+      font-size: rem(13);
+    }
+    .top-info {
+      color: rgb(55, 55, 55);
+      margin-bottom: rem(12);
+      .description {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(4);
+      }
+      i {
+        font-size: rem(20);
+      }
+      h6 {
+        font-size: rem(18);
+      }
+    }
+  }
+}
